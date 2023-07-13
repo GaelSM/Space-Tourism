@@ -10,7 +10,7 @@ import Technology from './routes/Technology.jsx'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "https://gaelsm.github.io/Space-Tourism/",
     element: <Root />,
     errorElement: <Error />,
     children: [
