@@ -1,0 +1,143 @@
+.home{
+    position: relative;
+    background: url("../assets/home/background-home-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 387px;
+    padding-left: 165px;
+
+    & h5{
+        color: #fff;
+        display: flex;
+        gap: 28px;
+
+        & span{
+            opacity: .4;
+            font-weight: bold;
+        }
+    }
+
+    & .text{
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    & .explore{
+        z-index: 2;
+        position: absolute;
+        display: grid;
+        place-content: center;
+        width: 274px;
+        height: 274px;
+        background-color: #fff;
+        border-radius: 50%;
+        top: 495px;
+        left: 69vw;
+
+        & h4{
+            color: rgb(11, 13, 23);
+        }
+
+        &:hover{
+            animation: pop alternate 1s ease-in-out infinite;
+            cursor: pointer;
+        }
+    }
+
+    & .shadow{
+        transform: scale(70%);
+        position: absolute;
+        width: 374px;
+        height: 374px;
+        border-radius: 70%;
+        top: 445px;
+        left: 65.6vw;
+        background-color: rgba(255, 255, 255, 0.178);
+        transition: transform .3s ease;
+    }
+
+    & .explore:hover ~ .shadow{
+        transform: scale(100%);
+    }
+}
+
+@keyframes pop {
+    100%{transform: scale(.9);}
+}
+
+
+@media (min-width: 600px) and (max-width: 1300px) {
+    .home{
+        background: url("../assets/home/background-home-tablet.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 202px 0 90px;
+        gap: 156px;
+
+
+        & .explore{
+            width: 242px;
+            height: 242px;
+            position: initial;
+            animation: pop 1s ease-in-out infinite alternate;
+
+            & h4{
+                font-size: 32px;
+            }
+        }
+
+        & .text{
+            text-align: center;
+            & h5{
+                display: inline;
+                width: 100%;
+            }
+        }
+
+        & .shadow{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .home{
+        background: url("../assets/home/background-home-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        padding: 112px 24px 0 24px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 81px;
+
+        & .text{
+            width: 327px;
+            text-align: center;
+            gap: 16px;
+
+            & h5{
+                display: inline;
+            }
+        }
+
+        & .explore{
+            z-index: 0;
+            width: 150px;
+            height: 150px;
+            position: initial;
+        }
+
+        & .shadow{
+            display: none;
+        }
+    }
+}

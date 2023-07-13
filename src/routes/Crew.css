@@ -1,0 +1,219 @@
+.crew{
+    position: relative;
+    background: url("../assets/crew/background-crew-desktop.jpg"), rgba(0, 0, 0, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    & h5{
+        margin-bottom: 154px;
+    }
+
+    & h4{
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 15px;
+    }
+
+    & h3{
+        margin-bottom: 27px;
+    }
+
+    & p{
+        width: 444px;
+    }
+
+    & .information{
+        height: 406px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & ul{
+            gap: 24px;
+
+            & li{
+                cursor: pointer;
+                width: 15px;
+                height: 15px;
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                transition: background-color .3s ease, transform .3s ease;
+
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.3);
+                }
+
+                &.active{
+                    animation: popup .5s ease forwards;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+
+    & .image{
+        position: absolute;
+        left: 55.55vw;
+        bottom: 0px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1300px){
+    .crew {
+        overflow: hidden;
+        background: url("../assets/crew/background-crew-tablet.jpg"), rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 136px 0 0;
+        height: auto;
+
+        & h5{
+            color: #fff;
+            display: flex;
+            gap: 28px;
+    
+            & span{
+                opacity: .4;
+                font-weight: bold;
+            }
+        }
+
+        & h4, h3, p{
+            margin-bottom: 0;
+        }
+
+        & p{
+            width: 100%;
+            font-size: 16px;
+        }
+
+        & h5{
+            margin-left: 5vw;
+            margin-bottom: 60px;
+        }
+
+        & .image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 456.37px;
+            height: 572px;
+            position: initial;
+            & img{
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    
+        & .slider{
+            gap: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        & .information{
+            height: 260px;
+            align-items: center;
+
+            & .top{
+                width: 520px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+
+                & h3{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .crew{
+        background: url("../assets/destination/background-destination-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 88px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+
+        
+        & h5{
+            color: #fff;
+            display: flex;
+            gap: 18px;
+            margin-left: 0;
+            margin-bottom: 0;
+    
+            & span{
+                opacity: .4;
+                font-weight: bold;
+            }
+        }
+
+
+        & .slider{
+            display: flex;
+            flex-direction: column-reverse;
+
+            & .information{
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+                gap: 32px;
+                width: 327px;
+
+                & ul{
+                    gap: 16px;
+                    & li{
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+
+                & .top{
+                    text-align: center;
+                    width: 327px;
+                    display: flex;
+                    flex-direction: column;
+
+                    & h4{
+                        font-size: 16px;
+                    }
+
+                    & h3{
+                        font-size: 24px;
+                    }
+
+                    & p{
+                        display: flex;
+                        width: 100%;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+
+        & .image{
+            width: 327px;
+            height: 227px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: initial;
+
+            & img{
+                height: 177px;
+                height: 222px;
+            }
+        }
+    }
+}
