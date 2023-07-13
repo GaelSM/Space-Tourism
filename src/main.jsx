@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
@@ -8,9 +8,9 @@ import Destination from './routes/Destination.jsx'
 import Crew from './routes/Crew.jsx'
 import Technology from './routes/Technology.jsx'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: "https://gaelsm.github.io/Space-Tourism/",
+    path: "/",
     element: <Root />,
     errorElement: <Error />,
     children: [
