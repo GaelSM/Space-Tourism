@@ -44,7 +44,7 @@ export default function Crew() {
                 </div>
                 <div className="image">
                     <motion.img 
-                        src={crew[currentElement].images.png} alt=""
+                        src={crew[currentElement].images.webp} alt=""
                         initial="initial"
                         animate="animate"
                         variants={sliderDownToTop}
