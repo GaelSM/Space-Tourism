@@ -31,12 +31,12 @@ export default function Destination() {
             <article className="slider">
                 <div className="left">
                         <motion.img
-                            src={destinations[currentElement].images.png}
+                            src={destinations[currentElement].images.webp}
                             alt={`${destinations[currentElement].name} image`}
                             initial="initial"
                             animate="animate"
                             variants={sliderDownToTop}
-                            key={destinations[currentElement].images.png}
+                            key={destinations[currentElement].images.webp}
                         />
                 </div>
                 <div className="right">
